@@ -57,8 +57,8 @@ export default function Home() {
           {'Codificado por  '}<a href="http://github.com/israelmarmar">@israelmarmar</a>
         </footer>
       </div>
-      <script src="https://omnichannel-test.herokuapp.com/assets/modules/channel-web/inject.js"></script>
-      <script dangerouslySetInnerHTML={{ __html: `window.botpressWebChat.init({ host: 'https://omnichannel-test.herokuapp.com', botId: 'create-user' })` }} />
+      <script src={`${process.env.BOTPRESS_SERVER}/assets/modules/channel-web/inject.js`}></script>
+      <script dangerouslySetInnerHTML={{ __html: `window.botpressWebChat.init({ host: '${process.env.BOTPRESS_SERVER}', botId: 'create-user' })` }} />
     </>
   )
 }
