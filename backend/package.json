@@ -4,7 +4,7 @@
   "description": "backend initialised with create-express-typescript-application.",
   "main": "src/index.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp -R src/utils/template/ build/src/utils/template/",
     "start": "node ./build/src/index.js",
     "dev": "ts-node ./src/index.ts",
     "dev:nodemon": "nodemon -w src -e ts,json -x ts-node ./src/index.ts",
