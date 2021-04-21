@@ -18,12 +18,12 @@
 .DS_Store
 # misc
 /frontend/.DS_Store
-/frontend*.pem
+/frontend/*.pem
 
 # debug
-/frontendnpm-debug.log*
-/frontendyarn-debug.log*
-/frontendyarn-error.log*
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
 
 # local env files
 /frontend/.env.local
