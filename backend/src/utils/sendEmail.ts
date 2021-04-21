@@ -5,10 +5,10 @@ import fs from 'fs';
 
 const sendEmail = async (email: string, subject: string, payload: any, template: string) => {
     try {
-      
+      console.log('sendEmail')
       const transporter = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
-        port: 465,
+        port: 587,
         auth: {
           user: process.env.EMAIL_USERNAME,
           pass: process.env.EMAIL_PASSWORD,
