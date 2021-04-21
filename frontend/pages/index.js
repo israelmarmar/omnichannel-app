@@ -7,8 +7,8 @@ export default function Home() {
       <Head>
         <title>OmniChannel test</title>
         <link rel="icon" href="/favicon.ico" />
-        <script src="http://localhost:3000/assets/modules/channel-web/inject.js"></script>
-        <script dangerouslySetInnerHTML={{__html: `window.botpressWebChat.init({ host: 'http://localhost:3000/', botId: 'create-user' })`}} />
+        <script src="https://omnichannel-test.herokuapp.com/assets/modules/channel-web/inject.js"></script>
+        <script dangerouslySetInnerHTML={{__html: `window.botpressWebChat.init({ host: 'https://omnichannel-test.herokuapp.com/', botId: 'create-user' })`}} />
 
       </Head>
 
