@@ -46,7 +46,7 @@ class UsersController {
       });
       let saveUser = await newUser.save();
       const link = `${process.env.CLIENT_URL}/users/passwordReset?token=${resetToken}&id=${saveUser._id}`;
-      sendEmail(req.body.email,'definição de senha',{link},'template/requestResetPassword.handlebars')
+      sendEmail(req.body.email,'definição de senha',{name: req.body.name, link},'template/requestResetPassword.handlebars')
       return res.json({ link });
     } catch (err) {
       console.log(err);
