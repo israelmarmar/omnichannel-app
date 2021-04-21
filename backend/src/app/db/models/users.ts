@@ -11,6 +11,15 @@ const UserSchema = new db.Schema({
     address: {
       type: String,
     },
+    token: {
+      type: String,
+    },
+    password: {
+      type: String,
+    },
+    resetPasswordExpires: {
+      type: String,
+    },
 });
   
 const User = db.model('User', UserSchema);

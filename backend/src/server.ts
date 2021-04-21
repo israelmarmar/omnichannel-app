@@ -1,15 +1,25 @@
+require("dotenv").config();
 import express, { Express } from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
 import config from '../config.json';
 import routes from './routes';
+import handlebars from 'express-handlebars';
+import path from 'path';
 
 const app: Express = express();
 
 /************************************************************************************
  *                              Basic Express Middlewares
  ***********************************************************************************/
+
+app.engine('handlebars', handlebars({
+  layoutsDir: __dirname + '/utils/template',
+  }));
+  
+app.set('views', path.join(__dirname, 'utils/template'));
+app.set('view engine', 'handlebars');
 
 app.set('json spaces', 4);
 app.use(express.json());
