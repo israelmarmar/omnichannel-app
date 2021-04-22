@@ -15,3 +15,5 @@ Servidor frontend: [https://omnichannel-app-front.herokuapp.com/](https://omnich
 Servidor backend: [https://omnichannel-app-back.herokuapp.com/](https://omnichannel-app-back.herokuapp.com/)
 
 Os diagramas com notação C4 estão na pasta docs.
+
+Talvez seja necessário abrir [https://omnichannel-test.herokuapp.com/](https://omnichannel-test.herokuapp.com/) no navegador, para não deixar o servidor de bot ocisoso.
