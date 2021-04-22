@@ -10,6 +10,8 @@ Depois vai para o item Code Editor no menu lateral, vá para o arquivo botpress.
 
 Se preferir, pode testar os servidores de stagging.
 
-bot do Telegram: [https://t.me/bemo_test_bot](https://t.me/bemo_test_bot)
+Bot do Telegram: [https://t.me/bemo_test_bot](https://t.me/bemo_test_bot)
 Servidor frontend: [https://omnichannel-app-front.herokuapp.com/](https://omnichannel-app-front.herokuapp.com/)
 Servidor backend: [https://omnichannel-app-back.herokuapp.com/](https://omnichannel-app-back.herokuapp.com/)
+
+Os diagramas com notação C4 estão na pasta docs.

@@ -1,0 +1,18 @@
+1. A solução deve ser disponibilizada em Cloud ou On-premise? 
+Em cloud, pois assim será possível escalar a aplicação mais facilmente
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa solução, responda qual ferramenta acreditas ser apropriada para o controle de tarefas da equipe, a ferramenta é ágil? 
+
+Kanbam atrelado a ferramenta ágil Scrum
+
+
+3. Você se sente capaz de liderar esta equipe? Por quê? 
+	É algo plausível, sou capaz de encontar soluções sem precisar de suporte de alguém e consequentemente dar suporte a alguém.
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria? 
+
+A adoção de um servidor de stagging do serviço de cloud adotado pela bemol para o desafio.
+
+5. Acha válido esse desafio para o processo que está participando?
+
+Sim, o desafio mostra alguns padrões de desenvolvimento adotados pela Bemol.
