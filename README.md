@@ -1,4 +1,4 @@
-# Front End Omnichannel
+# Projeto Omnichannel
 
 Para rodar o app, tenha instalado o NodeJS em sua máquina.
 
