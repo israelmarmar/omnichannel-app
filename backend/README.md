@@ -1,14 +1,14 @@
-# Back End Take Home Test
+# Back End Omnichannel
 
-To run the application, have NodeJS installed on your machine.
+Para rodar o app, tenha instalado o NodeJS em sua máquina.
 
-First, set your API address in src/services/api.ts
+Primeiro, remomeie o arquivo .env_sample para .env e coloque as credenciais do banco de dados mongodb e do servidor SMTP, junto com a URL do servidor em produção.
 
-Then run the commands:
+Então rode os comandos:
 
     npm install && npm run build
 
-Finally run the app with the command:
+Finalmente rode o servidor com o comando:
 
     npm start
 
