@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import api from '../services/api';
 import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
@@ -34,6 +35,7 @@ export default function Home() {
             <Input type="text" placeholder="email" id="email" onChange={setEmail} />
             <Input type="password" placeholder="password" id="password" onChange={setPassword} />
             <button type="submit" disabled={isLogging}>{isLogging ? '...' : 'Login'}</button>
+            <Link href='/resetpassword'>Esqueci a senha</Link>
           </form>
         </div>
 
