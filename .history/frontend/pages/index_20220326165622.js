@@ -60,7 +60,7 @@ export default function Home() {
         </footer>
       </div>
       <script src={`${process.env.BOTPRESS_SERVER}/assets/modules/channel-web/inject.js`}></script>
-      <script dangerouslySetInnerHTML={{ __html: `window.botpressWebChat.init({ host: '${process.env.BOTPRESS_SERVER}', botId: 'bot_omnichannel' })` }} />
+      <script dangerouslySetInnerHTML={{ __html: `window.botpressWebChat.init({ host: '${process.env.BOTPRESS_SERVER}', botId: 'create-user' })` }} />
     </>
   )
 }

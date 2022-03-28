@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "omni_server"
+  labels:
+    app: "omni_server"
+spec:
+  selector:
+    matchLabels:
+      app: "omni_server"
+  replicas: 10
+  template:
+    metadata:
+      labels:
+        app: "omni_server"
+    spec:
+      containers:
+        - name: "node"
+          image: "israelmarmar/omin_backend_node"
+        - name: "db"
+          image: "israelmarmar/omin_db"
+        - name: "botpress"
+          image: "israelmarmar/omin_botpress"

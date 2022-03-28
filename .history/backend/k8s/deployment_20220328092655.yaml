@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "botpressserver"
+  labels:
+    app: "botpressserver"
+spec:
+  selector:
+    matchLabels:
+      app: "botpressserver"
+  replicas: 10
+  template:
+    metadata:
+      labels:
+        app: "botpressserver"
+    spec:
+      containers:
+        - name: "node"
+          image: "israelmarmar/omin_backend_node"
+        - name: "db"
+          image: "israelmarmar/omin_db"
+        - name: "botpress"
+          image: "israelmarmar/omin_botpress"

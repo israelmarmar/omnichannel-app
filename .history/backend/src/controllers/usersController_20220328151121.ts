@@ -56,19 +56,12 @@ class UsersController {
 
   async login(req: Request, res: Response) {
     console.log(req.body);
-
+    
     const user = await User.findOne({
       email: req.body.email
     });
 
-    console.log(user);
-
-    if(!user)
-      return res.status(400).send({
-        message: 'usuário não cadastrado'
-      });
-
-    var passwordIsValid = await bcrypt.compare(
+    var passwordIsValid = bcrypt.compareSync(
       req.body.password,
       user.password
     );
@@ -120,22 +113,26 @@ class UsersController {
 
   async resetPassword(req: RequestWithToken, res: Response){
 
-    const update = {token: undefined, resetPasswordExpire: undefined};
+    User.findOne({ resetPasswordToken: req.token, resetPasswordExpires: { $gt: Date.now() } }, function(err: any, user: any) {
+      if (!user) {
+        return res.send('Password reset token is invalid or has expired.');
+      }
+
+      user.token = undefined;
+      user.resetPasswordExpires = undefined;
 
       console.log('password',req.body.password);
 
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(req.body.password, salt, (err, hash) => {
-          User.findOneAndUpdate(
-            { resetPasswordToken: req.token, resetPasswordExpires: { $gt: Date.now() } }, // <------ You are searching for req.params
-            { ...update, password: hash },
-            { rawResult: true }, 
-            (err: any) => {
-              res.send('<h3>Senha alterado com sucesso</h3>');
+          user.password = hash;
+          user.save((err: any) => {
+            res.send('<h3>Senha alterado com sucesso</h3>');
           });
         });
       });
 
+    });
   }
 
 }

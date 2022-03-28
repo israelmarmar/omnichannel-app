@@ -129,7 +129,7 @@ class UsersController {
           User.findOneAndUpdate(
             { resetPasswordToken: req.token, resetPasswordExpires: { $gt: Date.now() } }, // <------ You are searching for req.params
             { ...update, password: hash },
-            { rawResult: true }, 
+            { rawResult: true }
             (err: any) => {
               res.send('<h3>Senha alterado com sucesso</h3>');
           });

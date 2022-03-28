@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3333/api/users'
+  baseURL: 'http://omnichannel-app-back.herokuapp.com/api/users'
 })
 
 export default api;
